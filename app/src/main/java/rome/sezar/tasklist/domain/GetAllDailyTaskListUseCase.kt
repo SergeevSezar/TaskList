@@ -1,8 +1,8 @@
 package rome.sezar.tasklist.domain
 
-class GetAllDailyTaskListUseCase {
+class GetAllDailyTaskListUseCase(private val dailyTaskRepository: DailyTaskRepository) {
 
     fun getDailyTaskList(): List<DailyTask> {
-        TODO()
+        return dailyTaskRepository.getDailyTaskList()
     }
 }

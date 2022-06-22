@@ -1,8 +1,8 @@
 package rome.sezar.tasklist.domain
 
-class RemoveDailyTaskUseCase {
+class RemoveDailyTaskUseCase(private val dailyTaskRepository: DailyTaskRepository) {
 
-    fun removeDailyTask(id: Int) {
-
+    fun removeDailyTask(dailyTask: DailyTask) {
+        dailyTaskRepository.removeDailyTask(dailyTask)
     }
 }
