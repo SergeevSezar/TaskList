@@ -2,7 +2,7 @@ package rome.sezar.tasklist.domain
 
 interface DailyTaskRepository {
 
-    fun getDailyTask(id: Int)
+    fun getDailyTask(id: Int): DailyTask
 
     fun getDailyTaskList(): List<DailyTask>
 
@@ -10,6 +10,6 @@ interface DailyTaskRepository {
 
     fun removeDailyTask(dailyTask: DailyTask)
 
-    fun checkDailyTask(isComplete: Boolean)
+    fun checkDailyTask(dailyTask: DailyTask): Boolean
 
 }
