@@ -1,10 +1,12 @@
 package rome.sezar.tasklist.domain
 
+import androidx.lifecycle.LiveData
+
 interface DailyTaskRepository {
 
     fun getDailyTask(id: Int): DailyTask
 
-    fun getDailyTaskList(): List<DailyTask>
+    fun getDailyTaskList(): LiveData<List<DailyTask>>
 
     fun addDailyTask(dailyTask: DailyTask)
 

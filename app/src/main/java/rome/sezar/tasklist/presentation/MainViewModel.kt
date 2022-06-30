@@ -16,12 +16,7 @@ class MainViewModel : ViewModel() {
     private val addDailyTaskUseCase: AddDailyTaskUseCase = AddDailyTaskUseCase(repository)
     private val removeDailyTaskUseCase: RemoveDailyTaskUseCase = RemoveDailyTaskUseCase(repository)
 
-    val taskList = MutableLiveData<List<DailyTask>>()
-
-    fun getTaskList() {
-        val list = getAllDailyTaskListUseCase.getDailyTaskList()
-        taskList.value = list
-    }
+    val taskList = getAllDailyTaskListUseCase.getDailyTaskList()
 
     fun addDailyTask(dailyTask: DailyTask) {
         addDailyTaskUseCase.addDailyTask(dailyTask)

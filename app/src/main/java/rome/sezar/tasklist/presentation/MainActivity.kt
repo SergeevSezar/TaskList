@@ -17,6 +17,5 @@ class MainActivity : AppCompatActivity() {
         viewModel.taskList.observe(this) {
             TODO()
         }
-        viewModel.getTaskList()
     }
 }
